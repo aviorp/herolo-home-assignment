@@ -1,6 +1,6 @@
 import React from "react";
-import NavbarComponent from "../Navbar/Navbar";
-import Search from "../Search/Search";
+import NavbarComponent from "../../components/Navbar/Navbar";
+import Search from "../../components/Search/Search";
 import "./Layout.css";
 import { Row, Col } from "react-bootstrap";
 const Layout = () => {

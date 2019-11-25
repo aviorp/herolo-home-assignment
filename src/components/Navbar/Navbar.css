@@ -4,13 +4,13 @@
   flex-direction: row;
 }
 
-.logo-link {
+.wa-logo-link {
   justify-content: flex-start;
 }
-.nav-items {
+.wa-nav-items {
   justify-items: center;
 }
 
 .link:focus {
-  border-bottom: 2px solid #23374d;
+  border-bottom: 2px solid #1089ff;
 }

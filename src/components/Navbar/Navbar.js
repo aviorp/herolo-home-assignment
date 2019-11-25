@@ -9,12 +9,12 @@ const NavbarComponent = () => {
       expand="xl"
       className="wa-navbar d-flex justify-content-between"
     >
-      <Link to={"/home"} className="logo-link">
+      <Link to={"/home"} className="wa-logo-link">
         <Navbar.Brand>Weather-App</Navbar.Brand>
       </Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto nav-items">
+        <Nav className="mr-auto wa-nav-items">
           <Nav.Link as={Link} to={"/home"} className="link">
             Home
           </Nav.Link>

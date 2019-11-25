@@ -1,0 +1,25 @@
+.wa-main-card {
+  border: solid #23374d;
+  height: 70vh;
+  margin: 20px;
+  box-shadow: 0 2px 6px;
+}
+
+.wa-row {
+  width: 100%;
+}
+.wa-right {
+  text-align: right;
+  margin: 5px auto;
+  padding: 5px;
+}
+.wa-right > h5 {
+  line-height: 140px;
+}
+
+img {
+  margin: 5px auto;
+  padding: 5px;
+  display: inline-block;
+  box-shadow: 0 1px 2px #23374d;
+}

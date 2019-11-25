@@ -1,7 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const DaysCard = () => {
-  return <div>DaysCard</div>;
+const DaysCard = props => {
+  return (
+    <div>
+      <h1>{props.city}</h1>
+      <h3>{props.degs}</h3>
+      <img src={props.img} />
+    </div>
+  );
 };
 
 export default DaysCard;
