@@ -1,8 +1,11 @@
 .wa-main-card {
   border: solid #23374d;
-  height: 70vh;
-  margin: 20px;
+  margin: 10px;
+  text-align: center;
   box-shadow: 0 2px 6px;
+  width: 70vw;
+  background-color: #e5e5e5;
+  justify-content: center;
 }
 
 .wa-row {
@@ -19,7 +22,21 @@
 
 img {
   margin: 5px auto;
+  margin-top: 20px;
   padding: 5px;
   display: inline-block;
   box-shadow: 0 1px 2px #23374d;
+}
+
+.wa-header-details {
+  margin: 0 auto;
+  margin-top: 40px;
+  left: 0;
+  text-align: left;
+}
+.middle-content {
+  height: 30%;
+  width: 90%;
+  border: 1px solid;
+  text-align: center;
 }
