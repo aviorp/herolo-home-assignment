@@ -1,11 +1,11 @@
-import * as actionTypes from "./actions/actions";
-
 const initialState = {
   favorites: []
 };
 
-const reducer = (state = initialState, actions) => {
-  switch (actionTypes) {
+const reducer = (state = initialState, { type, payload }) => {
+  switch (type) {
+    default:
+      return state;
   }
 };
 

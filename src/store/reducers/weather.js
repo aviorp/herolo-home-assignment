@@ -1,13 +1,16 @@
-import * as actionTypes from "./actions/actions";
+import { FETCH_WEATHER } from '../actions/actions'
 
 const initialState = {
-  weather: []
+  weather: [],
 };
 
 const reducer = (state = initialState, { type, payload }) => {
-  switch (actionTypes) {
-    case actionTypes.FETCH_WEATHER:
-      console.log(actionTypes.FETCH_WEATHER);
+  switch (type) {
+    case FETCH_WEATHER:
+      return { ...state, weather: payload };
+
+    default:
+      return state;
   }
 };
 

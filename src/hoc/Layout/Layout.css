@@ -1,3 +1,11 @@
 .layout {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.router-outlet {
+margin: 0 auto;
+padding: 0 ;
 }

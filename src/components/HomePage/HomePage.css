@@ -1,4 +1,4 @@
 .wa-homepage {
-  position: absolute;
-  text-align: center;
+  display: flex;
+  flex-direction: row;
 }

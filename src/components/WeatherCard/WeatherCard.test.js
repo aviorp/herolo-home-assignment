@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import DaysCard from './DaysCard';
+import WeatherCard from './WeatherCard';
 
-describe('<DaysCard />', () => {
+describe('<WeatherCard />', () => {
   test('renders', () => {
-    const wrapper = shallow(<DaysCard />);
+    const wrapper = shallow(<WeatherCard />);
     expect(wrapper).toMatchSnapshot();
   });
 });

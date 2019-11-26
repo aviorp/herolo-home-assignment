@@ -1,14 +1,17 @@
 input {
   outline: none;
   border: none;
-  width: 250px;
-  text-shadow: 2px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 300px;
+
   background-color: #eeeeee;
 }
 
 input:focus {
   border-bottom: 2px solid #1089ff;
   transition: ease 0.2s;
+}
+
+form{
+  margin-top: 20px;
+  padding-bottom: 120px;
 }

@@ -1,20 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import reducer from "./store/reducers";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
-import { combineReducers, createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import favorites from "./store/reducers/favorites";
-import weather from "./store/reducers/weather";
 
-const rootReducer = combineReducers({
-  weather: weather,
-  favorites: favorites
-});
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const store = createStore(reducer, applyMiddleware(thunk));
 
 const app = (
   <Provider store={store}>
