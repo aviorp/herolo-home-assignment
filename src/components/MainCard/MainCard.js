@@ -1,7 +1,10 @@
 import React from "react";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Button } from "react-bootstrap";
+import { useSelector, useDispatch } from "react-redux";
+import { FETCH_WEATHER } from "../../store/actions/actions";
 import "./MainCard.css";
 const MainCard = props => {
+  const dispatch = useDispatch();
   return (
     <Container fluid={true} className="wa-main-card">
       <Row className="wa-row">
@@ -15,7 +18,9 @@ const MainCard = props => {
           <p>props.deg</p>
         </Col>
         <Col className="wa-right" md={2}>
-          <h5>x</h5>
+          <Button onClick={() => dispatch({ type: FETCH_WEATHER })}>
+            Add to Favorites
+          </Button>
         </Col>
       </Row>
       <hr />
