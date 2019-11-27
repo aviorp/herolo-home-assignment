@@ -5,15 +5,11 @@ import HomePage from '../../components/HomePage/HomePage';
 import Favorites from '../../components/Favorites/Favorites';
 import { Route, Redirect } from "react-router-dom";
 import "./Layout.css";
-import { Row, Col } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 const Layout = () => {
   return (
     <div className="layout">
-      <Row>
-        <Col>
-          <NavbarComponent />
-        </Col>
-      </Row>
+      <NavbarComponent />
       <Search />
       <Row className="router-outlet">
         <Route path="/home" exact component={HomePage} />

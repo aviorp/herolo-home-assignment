@@ -1,14 +1,15 @@
 import { SEARCH_CITY } from '../actions/actions'
 
 const initialState = {
-    cities: []
+    autoCompleteOptions: []
 }
 
 
 const reducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case SEARCH_CITY:
-            return { ...state, cities: payload }
+            let options = payload.map(option => ({ value: option.LocalizedName, label: option.LocalizedName }))
+            return { ...state, autoCompleteOptions: options }
 
         default:
             return state;

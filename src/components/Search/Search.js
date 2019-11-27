@@ -1,29 +1,20 @@
 import React, { Component } from 'react'
 import "./Search.css";
 import { connect } from "react-redux";
-import { searchCity } from '../../store/actions/actions'
+import { searchCity } from '../../store/actions/actions';
+import Select from 'react-select'
 export class Search extends Component {
-  searchHandler(e) {
-    let inputValue = e.target.value.toLowerCase()
-    this.props.searchCity(inputValue)
-    let cities = this.props.cities
-    let parsedArray = cities.filter(el => el.LocalizedName.toLowerCase().startsWith(inputValue));
-    // autocomplete == npm package
 
+  // Getting autocomplete options from api
+  searchHandler(inputValue) {
+    this.props.searchCity(inputValue)
   }
+
   render() {
     return (
-
-      <form>
-        <input
-          type="text"
-          placeholder="Search"
-          onKeyUp={(e) => this.searchHandler(e)}
-        />
-        {console.log(this.props.cities)}
-      </form>
-
-
+      <Select placeholder="Search"
+        onInputChange={(input) => this.searchHandler(input)}
+        options={this.props.autoCompleteOptions} />
     )
   }
 }
@@ -33,7 +24,7 @@ export class Search extends Component {
 const mapStateToProps = state => {
   return {
     weather: state.weather.weather,
-    cities: state.cities.cities
+    autoCompleteOptions: state.cities.autoCompleteOptions
   };
 };
 

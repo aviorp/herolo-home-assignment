@@ -1,7 +1,7 @@
 import { FETCH_WEATHER } from '../actions/actions'
 
 const initialState = {
-  weather: [],
+  weather: null,
 };
 
 const reducer = (state = initialState, { type, payload }) => {

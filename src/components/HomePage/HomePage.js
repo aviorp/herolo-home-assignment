@@ -4,6 +4,9 @@ import MainCard from "../MainCard/MainCard";
 import { connect } from "react-redux";
 import { fetchWeather } from "../../store/actions/actions";
 const HomePage = props => {
+  // Get default city weather
+  // props.fetchWeather("215854");
+
   navigator.geolocation.getCurrentPosition(function (position) {
     // save to consts lat, long
     // api call using lat and long
@@ -11,8 +14,8 @@ const HomePage = props => {
     // console.log(position.coords.latitude, position.coords.longitude);
   });
 
-  if (props.weather.length === 0) {
-    // props.fetchWeather()
+  if (!props.weather) {
+    props.fetchWeather("215854");
   }
   return (
     <div className="wa-homepage">
