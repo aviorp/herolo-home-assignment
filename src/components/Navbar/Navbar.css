@@ -1,7 +1,6 @@
-.wa-navbar {
-  background-color: #e5e5e5;
-  display: flex;
-  flex-direction: row;
+.wa-theme {
+  background-color: #23374d;
+  color: #e5e5e5;
 }
 
 .wa-logo-link {

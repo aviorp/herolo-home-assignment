@@ -1,4 +1,9 @@
 .wa-favorites{
-    vertical-align: middle;
-    width: 70vw;
+    border: solid #1089ff; 
+    text-align: center;
+    box-shadow: 0 2px 6px;
+    width: 70%;
+    height: 100%;  
+    border-radius: 25px;
+    overflow: scroll;
 }

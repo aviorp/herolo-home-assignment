@@ -8,11 +8,11 @@ import "./Layout.css";
 import { Row } from "react-bootstrap";
 const Layout = () => {
   return (
-    <div className="layout">
+    <div className="layout wa-theme">
       <NavbarComponent />
       <Search />
-      <Row className="router-outlet">
-        <Route path="/home" exact component={HomePage} />
+      <Row className="router-outlet wa-theme">
+        <Route path="/home" component={HomePage} />
         <Route path="/favorites" component={Favorites} />
         <Redirect from="/" to="/home" />
       </Row>

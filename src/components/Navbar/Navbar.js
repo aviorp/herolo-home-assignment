@@ -8,7 +8,8 @@ const NavbarComponent = () => {
       <Navbar
         collapseOnSelect
         expand="xl"
-        className="wa-navbar d-flex justify-content-between"
+        className="wa-theme d-flex justify-content-between"
+        variant="dark"
       >
         <Link to={"/home"} className="wa-logo-link">
           <Navbar.Brand>Weather-App</Navbar.Brand>

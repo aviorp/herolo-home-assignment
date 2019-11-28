@@ -2,20 +2,39 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import WeatherCard from '../WeatherCard/WeatherCard'
 import './Favorites.css'
-import { Row, Container } from 'react-bootstrap'
+import { Row, Col, Container } from 'react-bootstrap'
 export class Favorites extends Component {
   render() {
     return (
-      <div className="wa-favorites">
-        {/* {console.log(this.props.favorites)} */}
-        <Container>
-          <Row>
+
+      <Container fluid={true} className="wa-favorites wa-theme">
+        <hr />
+        <Row className="wa-cards-row">
+          <Col md={2}>
             <WeatherCard />
+          </Col>
+          <Col md={2}>
             <WeatherCard />
+          </Col>
+          <Col md={2}>
             <WeatherCard />
-          </Row>
-        </Container>
-      </div>
+          </Col>
+          <Col md={2}>
+            <WeatherCard />
+          </Col>
+          <Col md={2}>
+            <WeatherCard />
+          </Col>
+          <Col md={2}>
+            <WeatherCard />
+          </Col>
+          <Col md={2}>
+            <WeatherCard />
+          </Col>
+
+
+        </Row>
+      </Container>
 
     )
   }

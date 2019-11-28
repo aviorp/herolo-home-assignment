@@ -1,6 +1,6 @@
 import React from 'react';
 import './WeatherCard.css'
-import { Card, Button, Col } from 'react-bootstrap'
+import { Card, Col } from 'react-bootstrap'
 const WeatherCard = (props) => {
   const Days = ["Sun", "Mon", "Thu", "Wen", "Thu", "Fri", "Sat"]
   const getFerToCel = (value) => {
@@ -10,16 +10,15 @@ const WeatherCard = (props) => {
   return (
     <>
       <Col>
-        <Card className="wa-card" >
+        <Card className="wa-card wa-theme" >
           <Card.Body>
-            <Card.Title>{props.day && props.day.city}</Card.Title>
-            <Card.Text>
-              {props.day && getFerToCel(props.day.Temperature.Maximum.Value) + "°C"}
-            </Card.Text>
+            <Card.Title>{props.day && getFerToCel(props.day.Temperature.Maximum.Value) + "°C"}</Card.Title>
             <Card.Text>
               {props.day && Days[new Date(props.day.Date).getDay()]}
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            <h5> {props.day && props.day.Day.IconPhrase}</h5>
+
+
           </Card.Body>
         </Card>
       </Col>

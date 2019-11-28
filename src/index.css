@@ -3,3 +3,16 @@
 * {
   font-family: "Rubik", sans-serif;
 }
+.wa-theme {
+ background-color: #23374d;
+  color: #e5e5e5;
+}
+
+.wa-row {
+  width: 100%;
+}
+
+.wa-cards-row{
+  text-align: center;
+  width: 80vw;
+}
