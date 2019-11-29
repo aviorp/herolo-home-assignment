@@ -13,7 +13,7 @@ const reducer = (state = initialState, { type, payload }) => {
             return { ...state, autoCompleteOptions: options }
         case SELECT_CITY:
             return {
-                ...state, city: { key: payload.data[0].Key, name: payload.CITY_NAME }
+                ...state, city: { key: payload.cityKey[0].Key, name: payload.name }
             }
         default:
             return state;

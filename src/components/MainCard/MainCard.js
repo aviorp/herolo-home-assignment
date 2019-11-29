@@ -25,8 +25,7 @@ export const MainCard = (props) => {
       <hr />
       <Row className="wa-row">
         <Col>
-          <h1>Very Interesting Content...</h1>
-          <h3>props.weatherStatus</h3>
+          <h3>{props.weather && props.weather.Headline.Text}</h3>
         </Col>
       </Row>
       <hr />
@@ -35,6 +34,7 @@ export const MainCard = (props) => {
           <Col md={2}>
             <WeatherCard day={day} />
           </Col>
+
         )
         }
       </Row>
@@ -45,7 +45,8 @@ export const MainCard = (props) => {
 
 const mapStateToprops = state => {
   return {
-    weather: state.weather.weather
+    weather: state.weather.weather,
+    name: state.cities.city.name
   };
 };
 export default connect(mapStateToprops, { fetchWeather })(MainCard);

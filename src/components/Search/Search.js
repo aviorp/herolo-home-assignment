@@ -8,25 +8,24 @@ export class Search extends Component {
 
   // Getting autocomplete options from api
   searchHandler(inputValue, reason) {
-    this.props.searchCity(inputValue)
-    this.props.selectCity(inputValue)
-    if (reason.action === 'set-value') {
-      if (inputValue.trim().length > 0) {
-        console.log("SETVALUE")
-      }
+    if (reason.action === "input-change") {
+      this.props.searchCity(inputValue)
     }
+    //  else if (reason.action === "set-value") {
+    //   console.log(inputValue)
+    //   console.log(reason.action)
+    // }
   }
 
-  // setValueHandler(inputValue, reason) {
-  //   if (reason.action == "set-value") {
-  //     console.log(inputValue)
-  //   }
-  // }
+  setCityWeather(value) {
+    this.props.selectCity(value.value)
+  }
 
   render() {
     return (
       <Row className="wa-theme">
         <Select className="wa-search-bar" placeholder="Search" defaultOptions
+          onChange={(value) => this.setCityWeather(value)}
           onInputChange={(input, action) => this.searchHandler(input, action)} options={this.props.autoCompleteOptions}
         />
       </Row>

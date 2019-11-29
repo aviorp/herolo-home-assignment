@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./HomePage.css";
 import MainCard from "../MainCard/MainCard";
 import { connect } from "react-redux";
 import { fetchWeather } from "../../store/actions/actions";
+
+
 const HomePage = props => {
+
+  // Get city weather
+  useEffect(() => {
+    props.fetchWeather(props.cityKey.key);
+  }, [props])
 
   navigator.geolocation.getCurrentPosition(function (position) {
     // save to consts lat, long
@@ -11,21 +18,16 @@ const HomePage = props => {
     // get city key, replace city key default as this one. if this one is empty make a fallback to Tel Aviv
     // console.log(position.coords.latitude, position.coords.longitude);
   });
-  let display;
+
+  // Check if there is any weather to display
   if (!props.weather) {
-    display = <p>Loading...</p>
-    props.fetchWeather(props.cityKey.key);
-    return display
+    return (<p>Loading...</p>)
   } else {
-    display =
+    return (
       <div className="wa-homepage">
         <MainCard name={props.cityKey.name} weather={props.weather} />
-      </div>
-    return display
-
+      </div>)
   }
-
-
 };
 
 const mapStateToProps = state => {

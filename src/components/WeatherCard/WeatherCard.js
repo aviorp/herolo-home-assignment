@@ -1,6 +1,9 @@
 import React from 'react';
 import './WeatherCard.css'
 import { Card, Col } from 'react-bootstrap'
+
+
+
 const WeatherCard = (props) => {
   const Days = ["Sun", "Mon", "Thu", "Wen", "Thu", "Fri", "Sat"]
   const getFerToCel = (value) => {

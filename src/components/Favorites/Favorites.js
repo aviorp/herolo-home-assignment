@@ -1,44 +1,38 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 import WeatherCard from '../WeatherCard/WeatherCard'
 import './Favorites.css'
 import { Row, Col, Container } from 'react-bootstrap'
-export class Favorites extends Component {
-  render() {
-    return (
-
-      <Container fluid={true} className="wa-favorites wa-theme">
-        <hr />
-        <Row className="wa-cards-row">
-          <Col md={2}>
-            <WeatherCard />
-          </Col>
-          <Col md={2}>
-            <WeatherCard />
-          </Col>
-          <Col md={2}>
-            <WeatherCard />
-          </Col>
-          <Col md={2}>
-            <WeatherCard />
-          </Col>
-          <Col md={2}>
-            <WeatherCard />
-          </Col>
-          <Col md={2}>
-            <WeatherCard />
-          </Col>
-          <Col md={2}>
-            <WeatherCard />
-          </Col>
 
 
-        </Row>
-      </Container>
+const Favorites = (props) => {
+  return (
+    <Container fluid={true} className="wa-favorites wa-theme">
+      <hr />
+      <Row className="wa-cards-row">
+        {/* 
+        <Col>
+          <Card className="wa-card wa-theme" >
+            <Card.Body>
+              <Card.Title>{props.day && getFerToCel(props.day.Temperature.Maximum.Value) + "°C"}</Card.Title>
+              <Card.Text>
+                {props.day && Days[new Date(props.day.Date).getDay()]}
+              </Card.Text>
+              <h5> {props.day && props.day.Day.IconPhrase}</h5>
 
-    )
-  }
+
+            </Card.Body>
+          </Card>
+        </Col> */}
+
+      </Row>
+    </Container>
+
+  )
 }
+
+
+
 const mapStateToProps = (state) => {
   return {
     favorites: state.favorites.favorites
