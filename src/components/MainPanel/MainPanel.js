@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { connect } from "react-redux";
-import { fetchWeather } from "../../store/actions/actions";
+import { toggleFavorite } from "../../store/actions/actions";
 import WeatherCard from '../WeatherCard/WeatherCard'
 import "./MainPanel.css";
 
@@ -17,7 +17,7 @@ export const MainCard = (props) => {
           <br />
         </Col>
         <Col className="wa-right" md={2}>
-          <Button >
+          <Button onClick={() => props.toggleFavorite(props.cityKey)}>
             Add To Favorite
           </Button>
         </Col>
@@ -46,7 +46,8 @@ export const MainCard = (props) => {
 const mapStateToprops = state => {
   return {
     weather: state.weather.weather,
-    name: state.cities.city.name
+    name: state.cities.city.name,
+    cityKey: state.cities.city.key
   };
 };
-export default connect(mapStateToprops, { fetchWeather })(MainCard);
+export default connect(mapStateToprops, { toggleFavorite })(MainCard);

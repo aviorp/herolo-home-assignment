@@ -2,10 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 const FavoritesCard = (props) => {
 
-  if (!props.favorites || props.favorites === []) {
+  if (!props.favorites) {
     return <h1>OOPS, you out of Favorite cities..  </h1>
   } else {
-    return (console.log(props.favorites))
+    return (<div>
+      {console.log(props.favorites)}
+    </div>)
   }
 
 
@@ -14,7 +16,7 @@ const FavoritesCard = (props) => {
 const mapStateToProps = (state) => {
 
   return {
-    favorties: state.favorties
+    favorites: state.favorites
   }
 
 }

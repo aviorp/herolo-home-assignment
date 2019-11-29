@@ -10,7 +10,7 @@ const HomePage = props => {
   // Get city weather
   useEffect(() => {
     props.fetchWeather(props.cityKey.key);
-  }, [props])
+  }, [])
 
   navigator.geolocation.getCurrentPosition(function (position) {
     // save to consts lat, long
