@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./HomePage.css";
 import { connect } from "react-redux";
 import { fetchWeather } from "../../store/actions/actions";
-import MainPanel from "../MainPanel/MainPanel";
+import MainPanel from "./MainPanel/MainPanel";
 
 
 const HomePage = props => {
@@ -10,7 +10,7 @@ const HomePage = props => {
   // Get city weather
   useEffect(() => {
     props.fetchWeather(props.cityKey.key);
-  }, [])
+  }, [props])
 
   navigator.geolocation.getCurrentPosition(function (position) {
     // save to consts lat, long

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { connect } from "react-redux";
-import { toggleFavorite } from "../../store/actions/actions";
+import { toggleFavorite } from "../../../store/actions/actions";
 import WeatherCard from '../WeatherCard/WeatherCard'
 import "./MainPanel.css";
 
@@ -17,7 +17,7 @@ export const MainCard = (props) => {
           <br />
         </Col>
         <Col className="wa-right" md={2}>
-          <Button onClick={() => props.toggleFavorite(props.cityKey)}>
+          <Button onClick={() => props.toggleFavorite(props.cityKey, props.name)}>
             Add To Favorite
           </Button>
         </Col>
@@ -33,9 +33,7 @@ export const MainCard = (props) => {
         {props.weather && props.weather.DailyForecasts.map(day =>
           <Col md={2}>
             <WeatherCard day={day} />
-          </Col>
-
-        )
+          </Col>)
         }
       </Row>
     </Container>

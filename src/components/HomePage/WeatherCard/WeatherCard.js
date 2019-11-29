@@ -7,8 +7,8 @@ import { Card, Col } from 'react-bootstrap'
 const WeatherCard = (props) => {
   const Days = ["Sun", "Mon", "Thu", "Wen", "Thu", "Fri", "Sat"]
   const getFerToCel = (value) => {
-    let celuis = ((value - 32) * 5) / 9;
-    return celuis | 0
+    let celsius = ((value - 32) * 5) / 9;
+    return celsius | 0
   }
   return (
     <>

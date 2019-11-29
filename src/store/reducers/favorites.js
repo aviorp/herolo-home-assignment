@@ -1,7 +1,7 @@
 import { FAVORITE_CITY } from "../actions/actions";
 
 const initialState = {
-  favorites: [{ key: 215854 }]
+  favorites: []
 };
 
 const reducer = (state = initialState, { type, payload }) => {
@@ -15,7 +15,7 @@ const reducer = (state = initialState, { type, payload }) => {
       }
       console.log(state.favorites)
     }
-      break;
+    // eslint-disable-next-line
     default:
       return state;
   }

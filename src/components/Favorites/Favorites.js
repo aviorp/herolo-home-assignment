@@ -1,21 +1,15 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import './Favorites.css';
-import FavoritesCard from '../FavoritesCard/FavoritesCard';
+import FavoritesPanel from './FavoritesPanel/FavoritesPanel';
 
-const Favorites = (props) => {
+const Favorites = () => {
   return (
     <div>
-      <FavoritesCard />
+      <FavoritesPanel />
     </div>
   )
 }
 
 
 
-const mapStateToProps = (state) => {
-  return {
-    favorites: state.favorites.favorites
-  }
-}
-export default connect(mapStateToProps, null)(Favorites);
+export default (Favorites);

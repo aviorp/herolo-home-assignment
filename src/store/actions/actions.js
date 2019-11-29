@@ -2,11 +2,10 @@ export const FETCH_WEATHER = "FETCH_WEATHER";
 export const SEARCH_CITY = "SEARCH_CITY";
 export const SELECT_CITY = "SELECT_CITY";
 export const FAVORITE_CITY = "FAVORITE_CITY";
-export const API_KEY = "ElpHiE7xAY6WbJXZlgFUlBQnB5taXRfR";
+export const API_KEY = "Tpu3QVYMN0RFbQXhJgqnoGhxV2klFxRC";
 
-// Get city by autocomplete, and save city code in cityKey and city name
-export const toggleFavorite = (FAV_CITY_KEY) => async dispatch => {
-  dispatch({ type: FAVORITE_CITY, payload: { key: FAV_CITY_KEY } })
+export const toggleFavorite = (FAV_CITY_KEY, FAV_CITY_NAME) => async dispatch => {
+  dispatch({ type: FAVORITE_CITY, payload: { key: FAV_CITY_KEY, name: FAV_CITY_NAME } })
 }
 
 export const selectCity = (CITY_NAME) => async dispatch => {
