@@ -1,7 +1,7 @@
 import { FAVORITE_CITY } from "../actions/actions";
 
 const initialState = {
-  favorites: []
+  favorites: ["test"]
 };
 
 const reducer = (state = initialState, { type, payload }) => {

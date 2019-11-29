@@ -3,7 +3,7 @@ import { Row, Col, Container, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { fetchWeather } from "../../store/actions/actions";
 import WeatherCard from '../WeatherCard/WeatherCard'
-import "./MainCard.css";
+import "./MainPanel.css";
 
 export const MainCard = (props) => {
   return (

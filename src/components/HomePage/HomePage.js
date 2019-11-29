@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import "./HomePage.css";
-import MainCard from "../MainCard/MainCard";
 import { connect } from "react-redux";
 import { fetchWeather } from "../../store/actions/actions";
+import MainPanel from "../MainPanel/MainPanel";
 
 
 const HomePage = props => {
@@ -25,7 +25,7 @@ const HomePage = props => {
   } else {
     return (
       <div className="wa-homepage">
-        <MainCard name={props.cityKey.name} weather={props.weather} />
+        <MainPanel name={props.cityKey.name} weather={props.weather} />
       </div>)
   }
 };

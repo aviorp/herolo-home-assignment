@@ -1,39 +1,36 @@
-import React, { Component } from 'react'
+import React from 'react'
 import "./Search.css";
 import { connect } from "react-redux";
 import { searchCity, selectCity } from '../../store/actions/actions';
 import { Row } from 'react-bootstrap'
 import Select from 'react-select'
-export class Search extends Component {
+
+
+
+const Search = (props) => {
 
   // Getting autocomplete options from api
-  searchHandler(inputValue, reason) {
+  const searchHandler = (inputValue, reason) => {
     if (reason.action === "input-change") {
-      this.props.searchCity(inputValue)
+      props.searchCity(inputValue)
     }
-    //  else if (reason.action === "set-value") {
-    //   console.log(inputValue)
-    //   console.log(reason.action)
-    // }
+
   }
 
-  setCityWeather(value) {
-    this.props.selectCity(value.value)
+  const setCityWeather = (value) => {
+    props.selectCity(value.value)
   }
 
-  render() {
-    return (
-      <Row className="wa-theme">
-        <Select className="wa-search-bar" placeholder="Search" defaultOptions
-          onChange={(value) => this.setCityWeather(value)}
-          onInputChange={(input, action) => this.searchHandler(input, action)} options={this.props.autoCompleteOptions}
-        />
-      </Row>
-    )
-  }
+  return (
+    <Row className="wa-theme">
+      <Select className="wa-search-bar" placeholder="Search" defaultOptions
+        onChange={(value) => setCityWeather(value)}
+        onInputChange={(input, action) => searchHandler(input, action)} options={props.autoCompleteOptions}
+      />
+    </Row>
+  )
+
 }
-
-
 
 const mapStateToProps = state => {
   return {

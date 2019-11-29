@@ -2,7 +2,7 @@ export const FETCH_WEATHER = "FETCH_WEATHER";
 export const SEARCH_CITY = "SEARCH_CITY";
 export const SELECT_CITY = "SELECT_CITY";
 export const FAVORITE_CITY = "FAVORITE_CITY";
-export const API_KEY = "hwPtiXFO2XDsMqzoAFBrpIjXGOrGx0yL";
+export const API_KEY = "ElpHiE7xAY6WbJXZlgFUlBQnB5taXRfR";
 
 // Get city by autocomplete, and save city code in cityKey and city name
 export const favoriteCity = (CITY_NAME) => async dispatch => {
@@ -10,7 +10,7 @@ export const favoriteCity = (CITY_NAME) => async dispatch => {
 }
 
 export const selectCity = (CITY_NAME) => async dispatch => {
-  let response = await fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=cEfGacG4IeFSEzbGpBxTIGAoPlcmqQyA&q=${CITY_NAME}`)
+  let response = await fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${CITY_NAME}`)
   let data = await response.json()
   console.log(data)
   dispatch({ type: SELECT_CITY, payload: { cityKey: data, name: CITY_NAME } })
