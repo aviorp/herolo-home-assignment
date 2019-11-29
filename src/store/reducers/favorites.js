@@ -1,7 +1,8 @@
 import { FAVORITE_CITY } from "../actions/actions";
 
 const initialState = {
-  favorites: []
+  favorites: [],
+  favCityName: null
 };
 
 const reducer = (state = initialState, { type, payload }) => {
@@ -13,7 +14,6 @@ const reducer = (state = initialState, { type, payload }) => {
       } else {
         state.favorites.splice(favoriteIndex, 1)
       }
-      console.log(state.favorites)
     }
     // eslint-disable-next-line
     default:

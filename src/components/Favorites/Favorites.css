@@ -2,8 +2,8 @@
     border: solid #1089ff; 
     text-align: center;
     box-shadow: 0 2px 6px;
-    width: 70%;
-    height: 100%;  
+    width: 70vw;
+    height: 70vh;  
     border-radius: 25px;
-    overflow: scroll;
+
 }

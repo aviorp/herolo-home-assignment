@@ -1,8 +1,8 @@
 import React from "react";
 import NavbarComponent from "../../components/Navbar/Navbar";
-import Search from "../../components/Search/Search";
 import HomePage from '../../components/HomePage/HomePage';
 import Favorites from '../../components/Favorites/Favorites';
+import FavCityDetails from '../../components/Favorites/FavCityDetails/FavCityDetails'
 import { Route, Redirect } from "react-router-dom";
 import "./Layout.css";
 import { Row } from "react-bootstrap";
@@ -10,10 +10,11 @@ const Layout = () => {
   return (
     <div className="layout wa-theme">
       <NavbarComponent />
-      <Search />
+      <hr />
       <Row className="router-outlet wa-theme">
         <Route path="/home" component={HomePage} />
         <Route path="/favorites" component={Favorites} />
+        <Route path="/details" component={FavCityDetails} />
         <Redirect from="/" to="/home" />
       </Row>
     </div>

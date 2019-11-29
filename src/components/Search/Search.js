@@ -14,9 +14,7 @@ const Search = (props) => {
     if (reason.action === "input-change") {
       props.searchCity(inputValue)
     }
-
   }
-
   const setCityWeather = (value) => {
     props.selectCity(value.value)
   }

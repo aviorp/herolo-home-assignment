@@ -2,36 +2,28 @@ import React from 'react'
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { toggleFavorite } from "../../../store/actions/actions";
-import WeatherCard from '../WeatherCard/WeatherCard'
-import "./MainPanel.css";
+import WeatherCard from '../../HomePage/WeatherCard/WeatherCard';
+import { Link } from 'react-router-dom'
+import "./FavCityDetails.css";
 
-export const MainCard = (props) => {
+export const FavCityDetails = (props) => {
 
 
   return (
-    <Container fluid={true} className="wa-main-card wa-theme">
-
+    < Container fluid={true} className="wa-main-card wa-theme" >
       <Row className="wa-row">
         <Col md={1}>
           <img src={"https://picsum.photos/150/150"} alt="City" />
         </Col>
         <Col md={3} className="wa-header-details">
-          <h1>{props.name}</h1>
+          <h1>{props.cityName.name}</h1>
           <br />
         </Col>
         <Col className="wa-right" md={2}>
-          <Button onClick={() => props.toggleFavorite(props.cityKey, props.name)}>
-            Add To Favorite
-          </Button>
+          <Link to="/home">
+            <Button>Back To Home</Button>
+          </Link>
           <br />
-          <br />
-          <Button onClick={() => {
-            navigator.geolocation.getCurrentPosition((position) => {
-              console.log(position.coords.latitude, position.coords.longitude)
-            })
-          }}>
-            Get my location
-          </Button>
         </Col>
       </Row>
       <hr />
@@ -48,7 +40,7 @@ export const MainCard = (props) => {
           </Col>)
         }
       </Row>
-    </Container>
+    </Container >
 
   )
 }
@@ -57,7 +49,8 @@ const mapStateToprops = state => {
   return {
     weather: state.weather.weather,
     name: state.cities.city.name,
-    cityKey: state.cities.city.key
+    cityName: state.weather.favCityName
+
   };
 };
-export default connect(mapStateToprops, { toggleFavorite })(MainCard);
+export default connect(mapStateToprops, { toggleFavorite })(FavCityDetails);
