@@ -43,7 +43,7 @@ export const FavCityDetails = (props) => {
         <hr />
         <Row className="wa-cards-row">
           {props.weather && props.weather.DailyForecasts.map((day, index) =>
-            <Col>
+            <Col key={"index: " + index++}>
               <WeatherCard key={"index: " + index++} day={day} />
             </Col>)
           }
