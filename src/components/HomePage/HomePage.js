@@ -5,10 +5,10 @@ import { fetchWeather } from "../../store/actions/actions";
 import MainPanel from "./MainPanel/MainPanel";
 import Search from '../Search/Search';
 const HomePage = props => {
-
   useEffect(() => {
     props.fetchWeather(props.cityKey.key);
-  }, [props])
+    // eslint-disable-next-line
+  }, [props.cityKey.key])
 
 
   navigator.geolocation.getCurrentPosition(function (position) {

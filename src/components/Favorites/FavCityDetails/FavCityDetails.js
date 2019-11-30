@@ -4,14 +4,15 @@ import { connect } from "react-redux";
 import { toggleFavorite } from "../../../store/actions/actions";
 import WeatherCard from '../../HomePage/WeatherCard/WeatherCard';
 import { Link } from 'react-router-dom'
+import MainIcon from '../../MainIcon/MainIcon';
 import "./FavCityDetails.css";
+
 
 export const FavCityDetails = (props) => {
   const getFerToCel = (value) => {
     let celsius = ((value - 32) * 5) / 9;
     return celsius | 0
   }
-
   return (
     <>
       <header>
@@ -21,7 +22,7 @@ export const FavCityDetails = (props) => {
       < Container fluid={true} className="wa-main-card wa-theme" >
         <Row className="wa-row">
           <Col >
-            <img src={"https://picsum.photos/150/150"} alt="City" />
+            <MainIcon iconPhrase={props.weather && props.weather.DailyForecasts[0].Day.IconPhrase} />
           </Col>
           <Col className="wa-header-details">
             <h1>{props.cityName.name}</h1>
@@ -35,16 +36,16 @@ export const FavCityDetails = (props) => {
           </Col>
         </Row>
         <hr />
-        <Row className="wa-row">
+        <Row >
           <Col>
             <h3>{props.weather && props.weather.Headline.Text}</h3>
           </Col>
         </Row>
         <hr />
         <Row className="wa-cards-row">
-          {props.weather && props.weather.DailyForecasts.map(day =>
+          {props.weather && props.weather.DailyForecasts.map((day, index) =>
             <Col>
-              <WeatherCard day={day} />
+              <WeatherCard key={"index: " + index++} day={day} />
             </Col>)
           }
         </Row>

@@ -4,20 +4,23 @@ import { connect } from "react-redux";
 import { toggleFavorite } from "../../../store/actions/actions";
 import WeatherCard from '../WeatherCard/WeatherCard';
 import "./MainPanel.css";
+import MainIcon from '../../MainIcon/MainIcon';
 
 
 export const MainPanel = (props) => {
+
   const getFerToCel = (value) => {
     let celsius = ((value - 32) * 5) / 9;
     return celsius | 0
   }
+
 
   return (
 
     <Container fluid={true} className="wa-main-card wa-theme">
       <Row className="wa-row">
         <Col>
-          <img src={"https://picsum.photos/150/150"} alt="City" />
+          <MainIcon iconPhrase={props.weather.DailyForecasts[0].Day.IconPhrase} />
         </Col>
         <Col className="wa-header-details">
           <h1>{props.name} </h1>

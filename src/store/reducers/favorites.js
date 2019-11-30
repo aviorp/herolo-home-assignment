@@ -1,7 +1,6 @@
 import { FAVORITE_CITY } from "../actions/actions";
 const initialState = {
   favorites: [],
-  favCityName: null
 };
 
 const reducer = (state = initialState, { type, payload }) => {
@@ -10,8 +9,11 @@ const reducer = (state = initialState, { type, payload }) => {
       let favoriteIndex = state.favorites.findIndex(el => el.key === payload.key)
       if (favoriteIndex === -1) {
         state.favorites.push(payload)
+        state.message = "City Added to Favorites."
       } else {
         state.favorites.splice(favoriteIndex, 1)
+        state.message = "City Deleted from Favorites."
+
       }
     }
     // eslint-disable-next-line

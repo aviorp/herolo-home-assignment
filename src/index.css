@@ -17,8 +17,12 @@
   width: 85%;
   overflow: auto;
 }
-.wa-row {
+.wa-row  {
+  margin-top: 45px;
   width: 100%;
+}
+.wa-main-pic {
+  margin-top: -10px;
 }
 
 .wa-cards-row{
