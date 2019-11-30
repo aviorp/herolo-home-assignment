@@ -16,18 +16,18 @@ export const setDetails = (FAV_CITY_KEY, FAV_CITY_NAME) => async dispatch => {
 }
 
 export const getGeoPosition = (LAT, LON) => async dispatch => {
-  let response = await fetch(`http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${LAT}%2C${LON}`)
+  let response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${LAT}%2C${LON}`)
   let data = await response.json();
   dispatch({ type: GET_GEO_POSITION, payload: data })
 }
 export const fetchWeather = (CITY_KEY) => async dispatch => {
-  let response = await fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/${CITY_KEY}?apikey=${API_KEY}`);
+  let response = await fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/${CITY_KEY}?apikey=${API_KEY}`);
   let data = await response.json();
   dispatch({ type: FETCH_WEATHER, payload: data });
 };
 
 export const selectCity = (CITY_NAME) => async dispatch => {
-  let response = await fetch(`http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${CITY_NAME}`)
+  let response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${CITY_NAME}`)
   let data = await response.json()
   dispatch({ type: SELECT_CITY, payload: { cityKey: data, name: CITY_NAME } })
 }
