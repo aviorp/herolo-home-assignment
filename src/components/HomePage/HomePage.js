@@ -5,8 +5,6 @@ import { fetchWeather } from "../../store/actions/actions";
 import MainPanel from "./MainPanel/MainPanel";
 import Search from '../Search/Search';
 const HomePage = props => {
-
-
   useEffect(() => {
     props.fetchWeather(props.cityKey.key);
     // eslint-disable-next-line
@@ -18,11 +16,10 @@ const HomePage = props => {
     return (
       <div className="wa-homepage">
         <Search />
-        <MainPanel name={props.geoCity.name ? props.geoCity.name : props.cityKey.name} weather={props.weather} />
+        <MainPanel name={props.cityKey && props.cityKey.name} weather={props.weather} />
       </div>)
   }
 };
-
 const mapStateToProps = state => {
   return {
     weather: state.weather.weather,

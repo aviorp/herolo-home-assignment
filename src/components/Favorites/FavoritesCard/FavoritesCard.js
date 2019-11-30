@@ -7,12 +7,6 @@ import { connect } from 'react-redux';
 
 const FavoritesCard = (props) => {
 
-
-  // const getFerToCel = (value) => {
-  //   let celsius = ((value - 32) * 5) / 9;
-  //   return celsius | 0
-  // }
-
   return (
     <>
 
@@ -35,7 +29,6 @@ const FavoritesCard = (props) => {
     </>
   )
 }
-
 
 const mapStateToProps = (state) => {
   return {

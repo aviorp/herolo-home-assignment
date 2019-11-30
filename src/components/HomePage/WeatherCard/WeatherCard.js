@@ -41,7 +41,6 @@ const WeatherCard = (props) => {
             <br />
             {icon}
           </Card.Title>
-
         </Card.Body>
       </Card>
     </>

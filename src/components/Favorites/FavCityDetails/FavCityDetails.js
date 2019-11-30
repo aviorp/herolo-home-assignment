@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom'
 import MainIcon from '../../MainIcon/MainIcon';
 import "./FavCityDetails.css";
 
-
 export const FavCityDetails = (props) => {
   const getFerToCel = (value) => {
     let celsius = ((value - 32) * 5) / 9;
@@ -28,7 +27,7 @@ export const FavCityDetails = (props) => {
             <h1>{props.cityName.name}</h1>
             <h4>{props.weather && getFerToCel(props.weather.DailyForecasts[0].Temperature.Maximum.Value) + "°C"}</h4>
           </Col>
-          <Col className="wa-right" md={2}>
+          <Col className="wa-right" >
             <Link to="/home">
               <Button>Back To Home</Button>
             </Link>

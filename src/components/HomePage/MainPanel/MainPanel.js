@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { toggleFavorite, getGeoPosition, fetchWeather } from "../../../store/actions/actions";
@@ -13,6 +13,11 @@ export const MainPanel = (props) => {
     let celsius = ((value - 32) * 5) / 9;
     return celsius | 0
   }
+  useEffect(() => {
+    props.fetchWeather(props.cityKey)
+    // eslint-disable-next-line
+  }, [props.cityKey])
+
   // eslint-disable-next-line
   const isFavorite = props.favorites.favorites && props.favorites.favorites.find(city => city.key == props.cityKey);
 
@@ -21,26 +26,25 @@ export const MainPanel = (props) => {
     <Container fluid={true} className="wa-main-card wa-theme">
       <Row className="wa-row">
         <Col>
-          <MainIcon iconPhrase={props.weather && props.weather.DailyForecasts[0].Day.IconPhrase} />
+          <MainIcon iconPhrase={props.weather.DailyForecasts[0].Day.IconPhrase} />
         </Col>
         <Col className="wa-header-details">
           <h1>{props.name} </h1>
           <h4>{props.weather && getFerToCel(props.weather.DailyForecasts[0].Temperature.Maximum.Value) + "°C"}</h4>
           <br />
         </Col>
-        <Col className="wa-right">
+        <Col md={1} className="wa-right">
           <div className="wa-icon">
             <i className={`fa ${isFavorite ? "fa-star" : "fa-star-o"} fa-10x`} style={{ color: isFavorite && "#ffd800" }} onClick={() => props.toggleFavorite(props.cityKey, props.name)}></i>
-          </div>
-          <br />
-          <br />
-          <Button onClick={() => {
-            navigator.geolocation.getCurrentPosition((position) => {
-              props.getGeoPosition(position.coords.latitude, position.coords.longitude)
-            })
-          }}>
-            Get my location
+            <br />
+            <Button onClick={() => {
+              navigator.geolocation.getCurrentPosition((position) => {
+                props.getGeoPosition(position.coords.latitude, position.coords.longitude)
+              })
+            }}>
+              Get my location
           </Button>
+          </div>
         </Col>
       </Row>
       <hr />

@@ -18,7 +18,7 @@ const FavoritesPanel = (props) => {
       <Container fluid={true} className="wa-main-card">
         <Row>
           {props.favorites.map(el => {
-            return (<Col key={el.key}><FavoritesCard name={el.name} cityKey={el.key} favWeather={props.weather} /></Col>)
+            return (<Col md={2} key={el.key}><FavoritesCard name={el.name} cityKey={el.key} favWeather={props.weather} /></Col>)
           })}
         </Row>
       </Container>
@@ -33,5 +33,4 @@ const mapStateToProps = (state) => {
   }
 
 }
-
 export default connect(mapStateToProps, null)(FavoritesPanel);
