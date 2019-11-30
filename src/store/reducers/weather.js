@@ -2,7 +2,6 @@ import { FETCH_WEATHER, SET_NAME } from '../actions/actions'
 
 const initialState = {
   weather: null,
-  favCity: ""
 };
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {

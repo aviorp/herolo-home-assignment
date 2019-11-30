@@ -3,9 +3,8 @@ import { SEARCH_CITY, SELECT_CITY, GET_GEO_POSITION } from '../actions/actions'
 const initialState = {
     autoCompleteOptions: [],
     city: { key: "215854", name: "Tel Aviv" },
-    geoCity: ""
-}
 
+}
 
 const reducer = (state = initialState, { type, payload }) => {
     switch (type) {
@@ -18,12 +17,11 @@ const reducer = (state = initialState, { type, payload }) => {
             }
         case GET_GEO_POSITION:
             return {
-                ...state, geoCity: { key: payload.Key, name: payload.LocalizedName }
+                ...state, city: { key: payload.Key, name: payload.LocalizedName }
             }
         default:
             return state;
     }
 }
-
 
 export default reducer

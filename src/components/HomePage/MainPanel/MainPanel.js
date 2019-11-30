@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { connect } from "react-redux";
-import { toggleFavorite, getGeoPosition } from "../../../store/actions/actions";
+import { toggleFavorite, getGeoPosition, fetchWeather } from "../../../store/actions/actions";
 import WeatherCard from '../WeatherCard/WeatherCard';
 import "./MainPanel.css";
 import MainIcon from '../../MainIcon/MainIcon';
@@ -21,7 +21,7 @@ export const MainPanel = (props) => {
     <Container fluid={true} className="wa-main-card wa-theme">
       <Row className="wa-row">
         <Col>
-          <MainIcon iconPhrase={props.weather.DailyForecasts[0].Day.IconPhrase} />
+          <MainIcon iconPhrase={props.weather && props.weather.DailyForecasts[0].Day.IconPhrase} />
         </Col>
         <Col className="wa-header-details">
           <h1>{props.name} </h1>
@@ -67,7 +67,8 @@ const mapStateToprops = state => {
     weather: state.weather.weather,
     name: state.cities.city.name,
     cityKey: state.cities.city.key,
-    favorites: state.favorites
+    favorites: state.favorites,
+    geoCity: state.cities.geoCity
   };
 };
-export default connect(mapStateToprops, { toggleFavorite, getGeoPosition })(MainPanel);
+export default connect(mapStateToprops, { toggleFavorite, getGeoPosition, fetchWeather })(MainPanel);

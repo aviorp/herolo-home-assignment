@@ -10,7 +10,9 @@ import Select from 'react-select'
 const Search = (props) => {
 
   const searchHandler = (inputValue, reason) => {
-    if (reason.action === "input-change") {
+    if (!/^[a-zA-Z]+$/.test(inputValue)) {
+      inputValue = ""
+    } else if (reason.action === "input-change") {
       props.searchCity(inputValue)
     }
   }
@@ -22,7 +24,7 @@ const Search = (props) => {
     <Row className="wa-theme">
       <Select className="wa-search-bar" placeholder="Search" defaultOptions
         onChange={(value) => setCityWeather(value)}
-        onInputChange={(input, action) => searchHandler(input, action)} options={props.autoCompleteOptions}
+        onInputChange={(input, action) => /^[a-zA-Z]+$/.test(input) ? searchHandler(input, action) : input = ""} options={props.autoCompleteOptions}
       />
     </Row>
   )

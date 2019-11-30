@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import FavoritesCard from '../FavoritesCard/FavoritesCard';
-import { Container } from 'react-bootstrap';
-import './FavoritesPanel.css'
+import { Container, Row, Col } from 'react-bootstrap';
+import './FavoritesPanel.css';
+
 const FavoritesPanel = (props) => {
 
   if (!props.favorites || props.favorites.length === 0) {
@@ -15,9 +16,11 @@ const FavoritesPanel = (props) => {
   } else {
     return (<div>
       <Container fluid={true} className="wa-main-card">
-        {props.favorites.map(el => {
-          return (<FavoritesCard name={el.name} cityKey={el.key} key={el.key} favWeather={props.weather} />)
-        })}
+        <Row>
+          {props.favorites.map(el => {
+            return (<Col key={el.key}><FavoritesCard name={el.name} cityKey={el.key} favWeather={props.weather} /></Col>)
+          })}
+        </Row>
       </Container>
     </div >)
   }
