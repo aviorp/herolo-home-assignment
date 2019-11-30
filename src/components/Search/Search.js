@@ -9,7 +9,6 @@ import Select from 'react-select'
 
 const Search = (props) => {
 
-  // Getting autocomplete options from api
   const searchHandler = (inputValue, reason) => {
     if (reason.action === "input-change") {
       props.searchCity(inputValue)
@@ -33,7 +32,8 @@ const Search = (props) => {
 const mapStateToProps = state => {
   return {
     weather: state.weather.weather,
-    autoCompleteOptions: state.cities.autoCompleteOptions
+    autoCompleteOptions: state.cities.autoCompleteOptions,
+    geoCity: state.cities.geoCity
   };
 };
 

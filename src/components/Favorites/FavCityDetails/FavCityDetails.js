@@ -58,7 +58,7 @@ const mapStateToprops = state => {
   return {
     weather: state.weather.weather,
     name: state.cities.city.name,
-    cityName: state.weather.favCityName
+    cityName: state.weather.favCity
 
   };
 };

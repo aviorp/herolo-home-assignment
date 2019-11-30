@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { connect } from "react-redux";
-import { toggleFavorite } from "../../../store/actions/actions";
+import { toggleFavorite, getGeoPosition } from "../../../store/actions/actions";
 import WeatherCard from '../WeatherCard/WeatherCard';
 import "./MainPanel.css";
 import MainIcon from '../../MainIcon/MainIcon';
@@ -13,7 +13,8 @@ export const MainPanel = (props) => {
     let celsius = ((value - 32) * 5) / 9;
     return celsius | 0
   }
-
+  // eslint-disable-next-line
+  const isFavorite = props.favorites.favorites && props.favorites.favorites.find(city => city.key == props.cityKey);
 
   return (
 
@@ -28,14 +29,14 @@ export const MainPanel = (props) => {
           <br />
         </Col>
         <Col className="wa-right">
-          <Button onClick={() => props.toggleFavorite(props.cityKey, props.name)}>
-            Add To Favorite
-          </Button>
+          <div className="wa-icon">
+            <i className={`fa ${isFavorite ? "fa-star" : "fa-star-o"} fa-10x`} style={{ color: isFavorite && "#ffd800" }} onClick={() => props.toggleFavorite(props.cityKey, props.name)}></i>
+          </div>
           <br />
           <br />
           <Button onClick={() => {
             navigator.geolocation.getCurrentPosition((position) => {
-              alert(position.coords.latitude + " " + position.coords.longitude)
+              props.getGeoPosition(position.coords.latitude, position.coords.longitude)
             })
           }}>
             Get my location
@@ -65,7 +66,8 @@ const mapStateToprops = state => {
   return {
     weather: state.weather.weather,
     name: state.cities.city.name,
-    cityKey: state.cities.city.key
+    cityKey: state.cities.city.key,
+    favorites: state.favorites
   };
 };
-export default connect(mapStateToprops, { toggleFavorite })(MainPanel);
+export default connect(mapStateToprops, { toggleFavorite, getGeoPosition })(MainPanel);

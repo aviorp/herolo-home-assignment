@@ -8,18 +8,24 @@ const reducer = (state = initialState, { type, payload }) => {
     case FAVORITE_CITY: {
       let favoriteIndex = state.favorites.findIndex(el => el.key === payload.key)
       if (favoriteIndex === -1) {
-        state.favorites.push(payload)
-        state.message = "City Added to Favorites."
-      } else {
-        state.favorites.splice(favoriteIndex, 1)
-        state.message = "City Deleted from Favorites."
-
-      }
+        return {
+          favorites: [
+            ...state.favorites, payload
+          ]
+        }
+      } else
+        if (favoriteIndex !== -1) {
+          let newFavorites = state.favorites.slice();
+          newFavorites.splice(favoriteIndex, 1)
+          return {
+            ...state, favorites: newFavorites
+          }
+        }
     }
     // eslint-disable-next-line
     default:
-      return state;
   }
+  return state;
 };
 
 export default reducer;
