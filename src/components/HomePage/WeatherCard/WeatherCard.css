@@ -1,9 +1,8 @@
-.wa-card{
-    width: 13rem;
-    margin-bottom: 15px;
-    height: 12rem;
-    border: 1px solid #eeeeee;
-    box-shadow: 0 2px 4px;
-    padding: 5px;
-    margin: 5px;
+
+
+.wa-body{
+    min-width: 200px;
+    width: auto;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 2px 3px;
 }

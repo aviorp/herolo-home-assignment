@@ -1,5 +1,4 @@
 import { FAVORITE_CITY } from "../actions/actions";
-
 const initialState = {
   favorites: [],
   favCityName: null

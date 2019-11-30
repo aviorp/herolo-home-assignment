@@ -2,12 +2,10 @@
   border: solid #1089ff; 
   text-align: center;
   box-shadow: 0 2px 6px;
-  width: 70%;
-  height: 100%;  
+  width: 85%;
+  height: 70vh;  
   border-radius: 25px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: auto;
 }
 
 .wa-row {
@@ -35,7 +33,6 @@ img {
 .wa-header-details {
   margin: 0 auto;
   margin-top: 40px;
-  left: 0;
   text-align: left;
 }
 .middle-content {
@@ -45,3 +42,6 @@ img {
   text-align: center;
 }
 
+header >h1 {
+  text-align: center;
+}

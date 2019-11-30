@@ -10,7 +10,7 @@ const NavbarComponent = () => {
       <Navbar
         collapseOnSelect
         expand="xl"
-        className="wa-theme d-flex justify-content-between"
+        className="wa-theme navbar navbar-default"
         variant="dark"
       >
         <Link to={"/home"} className="wa-logo-link">
@@ -18,7 +18,7 @@ const NavbarComponent = () => {
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto wa-nav-items">
+          <Nav className="nav navbar-nav navbar-center">
             <Nav.Link as={Link} to={"/home"} className="link">
               Home
           </Nav.Link>

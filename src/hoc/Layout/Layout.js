@@ -5,18 +5,15 @@ import Favorites from '../../components/Favorites/Favorites';
 import FavCityDetails from '../../components/Favorites/FavCityDetails/FavCityDetails'
 import { Route, Redirect } from "react-router-dom";
 import "./Layout.css";
-import { Row } from "react-bootstrap";
 const Layout = () => {
   return (
     <div className="layout wa-theme">
       <NavbarComponent />
       <hr />
-      <Row className="router-outlet wa-theme">
-        <Route path="/home" component={HomePage} />
-        <Route path="/favorites" component={Favorites} />
-        <Route path="/details" component={FavCityDetails} />
-        <Redirect from="/" to="/home" />
-      </Row>
+      <Route path="/home" component={HomePage} />
+      <Route path="/favorites" component={Favorites} />
+      <Route path="/details" component={FavCityDetails} />
+      <Redirect from="/" to="/home" />
     </div>
   );
 };

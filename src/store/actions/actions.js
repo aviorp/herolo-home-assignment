@@ -3,7 +3,7 @@ export const SEARCH_CITY = "SEARCH_CITY";
 export const SELECT_CITY = "SELECT_CITY";
 export const FAVORITE_CITY = "FAVORITE_CITY";
 export const SET_NAME = "SET_NAME";
-export const API_KEY = "F0crIEDPMJHXKKkU8bQuqSr3PAPIGO3M";
+export const API_KEY = "uom2pMrLHRSa2cWrfLZztZAshLkobunX";
 
 export const toggleFavorite = (FAV_CITY_KEY, FAV_CITY_NAME) => async dispatch => {
   dispatch({ type: FAVORITE_CITY, payload: { key: FAV_CITY_KEY, name: FAV_CITY_NAME } })

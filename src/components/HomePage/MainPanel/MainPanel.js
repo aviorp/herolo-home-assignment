@@ -1,25 +1,30 @@
-import React from 'react'
+import React from 'react';
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { toggleFavorite } from "../../../store/actions/actions";
-import WeatherCard from '../WeatherCard/WeatherCard'
+import WeatherCard from '../WeatherCard/WeatherCard';
 import "./MainPanel.css";
 
-export const MainCard = (props) => {
 
+export const MainPanel = (props) => {
+  const getFerToCel = (value) => {
+    let celsius = ((value - 32) * 5) / 9;
+    return celsius | 0
+  }
 
   return (
-    <Container fluid={true} className="wa-main-card wa-theme">
 
+    <Container fluid={true} className="wa-main-card wa-theme">
       <Row className="wa-row">
-        <Col md={1}>
+        <Col>
           <img src={"https://picsum.photos/150/150"} alt="City" />
         </Col>
-        <Col md={3} className="wa-header-details">
-          <h1>{props.name}</h1>
+        <Col className="wa-header-details">
+          <h1>{props.name} </h1>
+          <h4>{props.weather && getFerToCel(props.weather.DailyForecasts[0].Temperature.Maximum.Value) + "°C"}</h4>
           <br />
         </Col>
-        <Col className="wa-right" md={2}>
+        <Col className="wa-right">
           <Button onClick={() => props.toggleFavorite(props.cityKey, props.name)}>
             Add To Favorite
           </Button>
@@ -27,7 +32,7 @@ export const MainCard = (props) => {
           <br />
           <Button onClick={() => {
             navigator.geolocation.getCurrentPosition((position) => {
-              console.log(position.coords.latitude, position.coords.longitude)
+              alert(position.coords.latitude + " " + position.coords.longitude)
             })
           }}>
             Get my location
@@ -41,9 +46,9 @@ export const MainCard = (props) => {
         </Col>
       </Row>
       <hr />
-      <Row className="wa-cards-row">
-        {props.weather && props.weather.DailyForecasts.map(day =>
-          <Col md={2}>
+      <Row className="wa-weather-row">
+        {props.weather && props.weather.DailyForecasts.map((day, index = 0) =>
+          <Col key={"index: " + index++}>
             <WeatherCard day={day} />
           </Col>)
         }
@@ -60,4 +65,4 @@ const mapStateToprops = state => {
     cityKey: state.cities.city.key
   };
 };
-export default connect(mapStateToprops, { toggleFavorite })(MainCard);
+export default connect(mapStateToprops, { toggleFavorite })(MainPanel);

@@ -4,7 +4,8 @@ import FavoritesPanel from './FavoritesPanel/FavoritesPanel';
 
 const Favorites = () => {
   return (
-    <div className="wa-favorites">
+    <div className="wa-homepage">
+      <h1>Favorites</h1>
       <FavoritesPanel />
     </div>
   )
