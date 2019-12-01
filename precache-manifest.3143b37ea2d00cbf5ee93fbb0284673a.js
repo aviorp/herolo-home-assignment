@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e801726c34eedaed3aebced84da38e82",
+    "revision": "550fda2b755ca659596ff528e89961a8",
     "url": "/avior-aharon-24-11-19/index.html"
   },
   {
-    "revision": "cbc9812e3b4ad7c4322e",
+    "revision": "0b30c114b95afd024d33",
     "url": "/avior-aharon-24-11-19/static/css/2.b7f43d44.chunk.css"
   },
   {
-    "revision": "7693bff6c53fd312a960",
-    "url": "/avior-aharon-24-11-19/static/css/main.4830ad3e.chunk.css"
+    "revision": "90b8ebe2bd2a7f106686",
+    "url": "/avior-aharon-24-11-19/static/css/main.1716a121.chunk.css"
   },
   {
-    "revision": "cbc9812e3b4ad7c4322e",
-    "url": "/avior-aharon-24-11-19/static/js/2.cc42eaba.chunk.js"
+    "revision": "0b30c114b95afd024d33",
+    "url": "/avior-aharon-24-11-19/static/js/2.09a59501.chunk.js"
   },
   {
-    "revision": "7693bff6c53fd312a960",
-    "url": "/avior-aharon-24-11-19/static/js/main.c8bcfd61.chunk.js"
+    "revision": "90b8ebe2bd2a7f106686",
+    "url": "/avior-aharon-24-11-19/static/js/main.2dcfaea5.chunk.js"
   },
   {
     "revision": "b7097d1a84c840fa1a6d",
