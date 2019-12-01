@@ -33,7 +33,7 @@ export const MainPanel = (props) => {
           <h4>{props.weather && getFerToCel(props.weather.DailyForecasts[0].Temperature.Maximum.Value) + "°C"}</h4>
           <br />
         </Col>
-        <Col md={1} className="wa-right">
+        <Col  className="wa-right">
           <div className="wa-icon">
             <i className={`fa ${isFavorite ? "fa-star" : "fa-star-o"} fa-10x`} style={{ color: isFavorite && "#ffd800" }} onClick={() => props.toggleFavorite(props.cityKey, props.name)}></i>
             <br />
