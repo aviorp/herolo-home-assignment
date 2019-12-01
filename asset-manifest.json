@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/avior-aharon-24-11-19/static/css/main.4830ad3e.chunk.css",
-    "main.js": "/avior-aharon-24-11-19/static/js/main.c8bcfd61.chunk.js",
-    "main.js.map": "/avior-aharon-24-11-19/static/js/main.c8bcfd61.chunk.js.map",
-    "runtime-main.js": "/avior-aharon-24-11-19/static/js/runtime-main.7e734ec9.js",
-    "runtime-main.js.map": "/avior-aharon-24-11-19/static/js/runtime-main.7e734ec9.js.map",
-    "static/css/2.b7f43d44.chunk.css": "/avior-aharon-24-11-19/static/css/2.b7f43d44.chunk.css",
-    "static/js/2.cc42eaba.chunk.js": "/avior-aharon-24-11-19/static/js/2.cc42eaba.chunk.js",
-    "static/js/2.cc42eaba.chunk.js.map": "/avior-aharon-24-11-19/static/js/2.cc42eaba.chunk.js.map",
-    "index.html": "/avior-aharon-24-11-19/index.html",
-    "precache-manifest.a0ed57e02d617fe4504e991e4b90e8a6.js": "/avior-aharon-24-11-19/precache-manifest.a0ed57e02d617fe4504e991e4b90e8a6.js",
-    "service-worker.js": "/avior-aharon-24-11-19/service-worker.js",
-    "static/css/2.b7f43d44.chunk.css.map": "/avior-aharon-24-11-19/static/css/2.b7f43d44.chunk.css.map",
-    "static/css/main.4830ad3e.chunk.css.map": "/avior-aharon-24-11-19/static/css/main.4830ad3e.chunk.css.map",
-    "static/media/font-awesome.min.css": "/avior-aharon-24-11-19/static/media/fontawesome-webfont.fee66e71.woff"
+    "main.css": "aviorp.github.io/avior-aharon-24-11-19/static/css/main.4830ad3e.chunk.css",
+    "main.js": "aviorp.github.io/avior-aharon-24-11-19/static/js/main.aadd9a43.chunk.js",
+    "main.js.map": "aviorp.github.io/avior-aharon-24-11-19/static/js/main.aadd9a43.chunk.js.map",
+    "runtime-main.js": "aviorp.github.io/avior-aharon-24-11-19/static/js/runtime-main.8a31b8e9.js",
+    "runtime-main.js.map": "aviorp.github.io/avior-aharon-24-11-19/static/js/runtime-main.8a31b8e9.js.map",
+    "static/css/2.b3f0fd8f.chunk.css": "aviorp.github.io/avior-aharon-24-11-19/static/css/2.b3f0fd8f.chunk.css",
+    "static/js/2.cc42eaba.chunk.js": "aviorp.github.io/avior-aharon-24-11-19/static/js/2.cc42eaba.chunk.js",
+    "static/js/2.cc42eaba.chunk.js.map": "aviorp.github.io/avior-aharon-24-11-19/static/js/2.cc42eaba.chunk.js.map",
+    "index.html": "aviorp.github.io/avior-aharon-24-11-19/index.html",
+    "precache-manifest.3be222e4195fa7a39f6e224e11c91e63.js": "aviorp.github.io/avior-aharon-24-11-19/precache-manifest.3be222e4195fa7a39f6e224e11c91e63.js",
+    "service-worker.js": "aviorp.github.io/avior-aharon-24-11-19/service-worker.js",
+    "static/css/2.b3f0fd8f.chunk.css.map": "aviorp.github.io/avior-aharon-24-11-19/static/css/2.b3f0fd8f.chunk.css.map",
+    "static/css/main.4830ad3e.chunk.css.map": "aviorp.github.io/avior-aharon-24-11-19/static/css/main.4830ad3e.chunk.css.map",
+    "static/media/font-awesome.min.css": "aviorp.github.io/avior-aharon-24-11-19/static/media/fontawesome-webfont.fee66e71.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.7e734ec9.js",
-    "static/css/2.b7f43d44.chunk.css",
+    "static/js/runtime-main.8a31b8e9.js",
+    "static/css/2.b3f0fd8f.chunk.css",
     "static/js/2.cc42eaba.chunk.js",
     "static/css/main.4830ad3e.chunk.css",
-    "static/js/main.c8bcfd61.chunk.js"
+    "static/js/main.aadd9a43.chunk.js"
   ]
 }
