@@ -4,7 +4,7 @@ export const SELECT_CITY = "SELECT_CITY";
 export const FAVORITE_CITY = "FAVORITE_CITY";
 export const SET_NAME = "SET_NAME";
 export const GET_GEO_POSITION = "GET_GEO_POSITION";
-export const API_KEY = "XxVe5uE2Sgq2F6b6g47AwGdCJHJtVBFg";
+export const API_KEY = "snyN8dDXlqjNfwOIkRNoQoANTHAH5MNA";
 
 
 export const toggleFavorite = (FAV_CITY_KEY, FAV_CITY_NAME) => async dispatch => {
@@ -35,7 +35,7 @@ export const selectCity = (CITY_NAME) => async dispatch => {
 export const searchCity = (CITY_NAME) => async dispatch => {
   let response, data = [];
   if (CITY_NAME.trim().length > 0) {
-    response = await fetch(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${CITY_NAME}`)
+    response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${CITY_NAME}`)
     data = await response.json();
   }
   dispatch({ type: SEARCH_CITY, payload: data })
