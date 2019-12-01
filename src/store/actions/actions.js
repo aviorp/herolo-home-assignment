@@ -31,6 +31,7 @@ export const selectCity = (CITY_NAME) => async dispatch => {
   dispatch({ type: SELECT_CITY, payload: { cityKey: data, name: CITY_NAME } })
 }
 
+
 export const searchCity = (CITY_NAME) => async dispatch => {
   let response, data = [];
   if (CITY_NAME.trim().length > 0) {
