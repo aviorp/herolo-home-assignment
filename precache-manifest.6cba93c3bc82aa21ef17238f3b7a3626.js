@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "176b82e8244ac998a2e2f19cfed9f82f",
+    "revision": "ccf3c525a787898dcc25cda177490b73",
     "url": "/avior-aharon-24-11-19/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avior-aharon-24-11-19/static/css/2.b7f43d44.chunk.css"
   },
   {
-    "revision": "ecfa706f30be18536b15",
+    "revision": "ba15f660e2bc39cdbe71",
     "url": "/avior-aharon-24-11-19/static/css/main.1716a121.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avior-aharon-24-11-19/static/js/2.09a59501.chunk.js"
   },
   {
-    "revision": "ecfa706f30be18536b15",
-    "url": "/avior-aharon-24-11-19/static/js/main.9f094f95.chunk.js"
+    "revision": "ba15f660e2bc39cdbe71",
+    "url": "/avior-aharon-24-11-19/static/js/main.5f7edce5.chunk.js"
   },
   {
     "revision": "b7097d1a84c840fa1a6d",
