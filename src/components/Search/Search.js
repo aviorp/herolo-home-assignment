@@ -17,8 +17,8 @@ const Search = (props) => {
 
   return (
     <Select className="wa-search-bar" placeholder="Search" defaultOptions
-      onInputChange={(input, action) => /^[a-zA-Z]+$/.test(input) ? searchHandler(input, action) : input = ""} options={props.autoCompleteOptions}
       onChange={(value) => setCityWeather(value)}
+      onInputChange={(input, action) => /^[a-zA-Z\s]+$/.test(input) ? searchHandler(input, action) : input = ""} options={props.autoCompleteOptions}
     />
   )
 
