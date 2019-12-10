@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/avior-aharon-24-11-19/static/css/main.1716a121.chunk.css",
-    "main.js": "/avior-aharon-24-11-19/static/js/main.689f7de4.chunk.js",
-    "main.js.map": "/avior-aharon-24-11-19/static/js/main.689f7de4.chunk.js.map",
+    "main.js": "/avior-aharon-24-11-19/static/js/main.9f094f95.chunk.js",
+    "main.js.map": "/avior-aharon-24-11-19/static/js/main.9f094f95.chunk.js.map",
     "runtime-main.js": "/avior-aharon-24-11-19/static/js/runtime-main.7e734ec9.js",
     "runtime-main.js.map": "/avior-aharon-24-11-19/static/js/runtime-main.7e734ec9.js.map",
     "static/css/2.b7f43d44.chunk.css": "/avior-aharon-24-11-19/static/css/2.b7f43d44.chunk.css",
     "static/js/2.09a59501.chunk.js": "/avior-aharon-24-11-19/static/js/2.09a59501.chunk.js",
     "static/js/2.09a59501.chunk.js.map": "/avior-aharon-24-11-19/static/js/2.09a59501.chunk.js.map",
     "index.html": "/avior-aharon-24-11-19/index.html",
-    "precache-manifest.8bb2b0338c6fe606441d4b0831e9969b.js": "/avior-aharon-24-11-19/precache-manifest.8bb2b0338c6fe606441d4b0831e9969b.js",
+    "precache-manifest.d94033a3188642530f25cab140f74e40.js": "/avior-aharon-24-11-19/precache-manifest.d94033a3188642530f25cab140f74e40.js",
     "service-worker.js": "/avior-aharon-24-11-19/service-worker.js",
     "static/css/2.b7f43d44.chunk.css.map": "/avior-aharon-24-11-19/static/css/2.b7f43d44.chunk.css.map",
     "static/css/main.1716a121.chunk.css.map": "/avior-aharon-24-11-19/static/css/main.1716a121.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.b7f43d44.chunk.css",
     "static/js/2.09a59501.chunk.js",
     "static/css/main.1716a121.chunk.css",
-    "static/js/main.689f7de4.chunk.js"
+    "static/js/main.9f094f95.chunk.js"
   ]
 }

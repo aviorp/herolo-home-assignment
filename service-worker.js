@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/avior-aharon-24-11-19/precache-manifest.8bb2b0338c6fe606441d4b0831e9969b.js"
+  "/avior-aharon-24-11-19/precache-manifest.d94033a3188642530f25cab140f74e40.js"
 );
 
 self.addEventListener('message', (event) => {
