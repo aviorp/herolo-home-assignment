@@ -2,7 +2,6 @@ import React from 'react'
 import "./Search.css";
 import { connect } from "react-redux";
 import { searchCity, selectCity } from '../../store/actions/actions';
-import { Row } from 'react-bootstrap'
 import Select from 'react-select'
 
 const Search = (props) => {
@@ -17,12 +16,10 @@ const Search = (props) => {
   }
 
   return (
-    <Row className="wa-theme">
-      <Select className="wa-search-bar" placeholder="Search" defaultOptions
-        onChange={(value) => setCityWeather(value)}
-        onInputChange={(input, action) => /^[a-zA-Z]+$/.test(input) ? searchHandler(input, action) : input = ""} options={props.autoCompleteOptions}
-      />
-    </Row>
+    <Select className="wa-search-bar" placeholder="Search" defaultOptions
+      onInputChange={(input, action) => /^[a-zA-Z]+$/.test(input) ? searchHandler(input, action) : input = ""} options={props.autoCompleteOptions}
+      onChange={(value) => setCityWeather(value)}
+    />
   )
 
 }

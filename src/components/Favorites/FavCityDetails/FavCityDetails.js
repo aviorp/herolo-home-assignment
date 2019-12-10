@@ -24,7 +24,7 @@ export const FavCityDetails = (props) => {
             <MainIcon iconPhrase={props.weather && props.weather.DailyForecasts[0].Day.IconPhrase} />
           </Col>
           <Col className="wa-header-details">
-            <h1>{props.cityName.name}</h1>
+            <h1>{props.favCity.name}</h1>
             <h4>{props.weather && getFerToCel(props.weather.DailyForecasts[0].Temperature.Maximum.Value) + "°C"}</h4>
           </Col>
           <Col className="wa-right" >
@@ -57,7 +57,7 @@ const mapStateToprops = state => {
   return {
     weather: state.weather.weather,
     name: state.cities.city.name,
-    cityName: state.weather.favCity
+    favCity: state.weather.favCity
 
   };
 };

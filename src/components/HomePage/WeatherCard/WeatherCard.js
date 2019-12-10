@@ -31,19 +31,16 @@ const WeatherCard = (props) => {
 
 
   return (
-
-    <>
-      <Card className="wa-theme wa-body" >
-        <Card.Body>
-          <Card.Title> {props.day && Days[new Date(props.day.Date).getDay()]} &nbsp; <span>{props.day && getFerToCel(props.day.Temperature.Maximum.Value) + "°C"}</span></Card.Title>
-          <Card.Title>
-            {props.day && props.day.Day.IconPhrase}
-            <br />
-            {icon}
-          </Card.Title>
-        </Card.Body>
-      </Card>
-    </>
+    <Card className="wa-theme wa-body" >
+      <Card.Body>
+        <Card.Title> {props.day && Days[new Date(props.day.Date).getDay()]} &nbsp; <span>{props.day && getFerToCel(props.day.Temperature.Maximum.Value) + "°C"}</span></Card.Title>
+        <Card.Title>
+          {props.day && props.day.Day.IconPhrase}
+          <br />
+          {icon}
+        </Card.Title>
+      </Card.Body>
+    </Card>
   )
 };
 

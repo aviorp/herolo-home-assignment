@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Row, Col, Container, Button } from "react-bootstrap";
 import { connect } from "react-redux";
 import { toggleFavorite, getGeoPosition, fetchWeather } from "../../../store/actions/actions";
@@ -13,14 +13,8 @@ export const MainPanel = (props) => {
     let celsius = ((value - 32) * 5) / 9;
     return celsius | 0
   }
-
-  useEffect(() => {
-    props.fetchWeather(props.cityKey)
-    // eslint-disable-next-line
-  }, [props.cityKey])
-
   // eslint-disable-next-line
-  const isFavorite = props.favorites.favorites && props.favorites.favorites.find(city => city.key == props.cityKey);
+  const isFavorite = props.favorites && props.favorites.find(city => city.key == props.cityKey);
 
   return (
 
@@ -72,7 +66,7 @@ const mapStateToprops = state => {
     weather: state.weather.weather,
     name: state.cities.city.name,
     cityKey: state.cities.city.key,
-    favorites: state.favorites,
+    favorites: state.favorites.favorites,
     geoCity: state.cities.geoCity
   };
 };
