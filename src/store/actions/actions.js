@@ -13,7 +13,7 @@ export const toggleFavorite = (FAV_CITY_KEY, FAV_CITY_NAME) => async dispatch =>
 export const setDetails = (FAV_CITY_KEY, FAV_CITY_NAME) => async dispatch => {
   dispatch({ type: SET_NAME, payload: { key: FAV_CITY_KEY, name: FAV_CITY_NAME } })
 }
-אנא
+
 export const getGeoPosition = (LAT, LON) => async dispatch => {
   let response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${LAT}%2C${LON}`)
   let data = await response.json();
