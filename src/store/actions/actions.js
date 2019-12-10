@@ -4,7 +4,7 @@ export const SELECT_CITY = "SELECT_CITY";
 export const FAVORITE_CITY = "FAVORITE_CITY";
 export const SET_NAME = "SET_NAME";
 export const GET_GEO_POSITION = "GET_GEO_POSITION";
-export const API_KEY = "vTutMQFleOk1hl7Mewxpn9HjWFw2JEbN";
+export const API_KEY = "AbctAxCJz53xCUG5HbsX7gFeDXMZ96AD";
 
 export const toggleFavorite = (FAV_CITY_KEY, FAV_CITY_NAME) => async dispatch => {
   dispatch({ type: FAVORITE_CITY, payload: { key: FAV_CITY_KEY, name: FAV_CITY_NAME } })
@@ -13,7 +13,7 @@ export const toggleFavorite = (FAV_CITY_KEY, FAV_CITY_NAME) => async dispatch =>
 export const setDetails = (FAV_CITY_KEY, FAV_CITY_NAME) => async dispatch => {
   dispatch({ type: SET_NAME, payload: { key: FAV_CITY_KEY, name: FAV_CITY_NAME } })
 }
-
+אנא
 export const getGeoPosition = (LAT, LON) => async dispatch => {
   let response = await fetch(`https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=${API_KEY}&q=${LAT}%2C${LON}`)
   let data = await response.json();
@@ -30,7 +30,6 @@ export const selectCity = (CITY_NAME) => async dispatch => {
   let data = await response.json()
   dispatch({ type: SELECT_CITY, payload: { cityKey: data, name: CITY_NAME } })
 }
-
 
 export const searchCity = (CITY_NAME) => async dispatch => {
   let response, data = [];

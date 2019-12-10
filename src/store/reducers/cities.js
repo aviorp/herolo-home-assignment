@@ -8,6 +8,7 @@ const initialState = {
 
 const reducer = (state = initialState, { type, payload }) => {
     switch (type) {
+
         case SEARCH_CITY:
             let options = payload.map(option => ({ value: option.LocalizedName, label: option.LocalizedName }))
             return { ...state, autoCompleteOptions: options }

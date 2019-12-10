@@ -5,14 +5,10 @@ import { searchCity, selectCity } from '../../store/actions/actions';
 import { Row } from 'react-bootstrap'
 import Select from 'react-select'
 
-
-
 const Search = (props) => {
 
   const searchHandler = (inputValue, reason) => {
-    if (!/^[a-zA-Z]+$/.test(inputValue)) {
-      inputValue = ""
-    } else if (reason.action === "input-change") {
+    if (reason.action === "input-change") {
       props.searchCity(inputValue)
     }
   }

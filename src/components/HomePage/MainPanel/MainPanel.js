@@ -13,6 +13,7 @@ export const MainPanel = (props) => {
     let celsius = ((value - 32) * 5) / 9;
     return celsius | 0
   }
+
   useEffect(() => {
     props.fetchWeather(props.cityKey)
     // eslint-disable-next-line
@@ -33,7 +34,7 @@ export const MainPanel = (props) => {
           <h4>{props.weather && getFerToCel(props.weather.DailyForecasts[0].Temperature.Maximum.Value) + "°C"}</h4>
           <br />
         </Col>
-        <Col  className="wa-right">
+        <Col className="wa-right">
           <div className="wa-icon">
             <i className={`fa ${isFavorite ? "fa-star" : "fa-star-o"} fa-10x`} style={{ color: isFavorite && "#ffd800" }} onClick={() => props.toggleFavorite(props.cityKey, props.name)}></i>
             <br />
